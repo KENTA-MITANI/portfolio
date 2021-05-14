@@ -4,11 +4,11 @@
  @import "@fortawesome/fontawesome-free/scss/fontawesome";
  @import "@fortawesome/fontawesome-free/scss/regular";
 
- .base-container {
-   @extend .container-fluid;
-   max-width: var(--breakpoint-lg);
-   padding: 30px 15px;
- }
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
 
  .navbar-nav {
    font-size: 15px;
