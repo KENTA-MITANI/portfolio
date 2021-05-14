@@ -1,0 +1,36 @@
+@import "bootstrap/scss/bootstrap";
+
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+
+ .base-container {
+   @extend .container-fluid;
+   max-width: var(--breakpoint-lg);
+   padding: 30px 15px;
+ }
+
+ .navbar-nav {
+   font-size: 15px;
+ }
+
+ .navbar {
+   margin: 0 auto;
+ }
+
+ .mw-md {
+   max-width: 720px;
+ }
+
+ .mw-lg {
+   max-width: 960px;
+ }
+
+ .mw-xl {
+   max-width: 1200px;
+ }
+
+ body {
+   padding-top: 50px;
+ }
+ 
