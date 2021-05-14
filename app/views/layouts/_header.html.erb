@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+  <span class="navbar-brand" href="#">StudyManager</span>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <%# ホーム %>
+      <li class="nav-item ">
+        <a class="nav-link" href="/homes">ホーム <span class="sr-only">(current)</span></a>
+      </li>
+      <%# 学習記録 %>
+      <li class="nav-item">
+        <a class="nav-link" href="/reports">学習記録 <span class="sr-only">(current)</span></a>
+      </li>
+      <%# ランキング %>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ランキング <span class="sr-only">(current)</span></a>
+      </li>
+      <%# タイムライン %>
+      <li class="nav-item">
+        <a class="nav-link" href="#">タイムライン <span class="sr-only">(current)</span></a>
+      </li>
+      <%# 設定 %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        設定
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">ログアウト</a>
+          <a class="dropdown-item" href="#">設定</a>
+        </div>
+      </li>
+      <% if user_signed_in? %>
+        <!-- ログイン時 -->
+        <li class="nav-item active">
+          <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active"%>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "本当によろしいですか" } %>
+        </li>
+      <% else %>
+        <!-- 非ログイン時 -->
+        <li class="nav-item active">
+          <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>  
+
+
