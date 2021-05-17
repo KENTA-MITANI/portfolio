@@ -7,6 +7,6 @@ class ReportsController < ApplicationController
   end
 
   def create
-    Item.create
+    Report.create
   end
 end
