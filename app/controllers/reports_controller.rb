@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   def index
+    @item = Item.new
   end
 
   def new
@@ -7,6 +8,5 @@ class ReportsController < ApplicationController
   end
 
   def create
-    Report.create
   end
 end
