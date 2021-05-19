@@ -9,12 +9,12 @@
         </div>
         <div class="modal-body">
           <div class="form-group field">
-            <%= form_with model: @item, url: "/items", method: :post,local: true do |f| %>
+            <%= form_with model: @item, method: :post, local: true do |f| %>
               <%= f.label :item_name,"項目名" %>
               <%= f.text_field :item_name, class: "form-control" %>
-              <%= f.label :item_status,"項目名" %>
+              <%= f.label :item_status,"状況" %>
               <%= f.text_field :item_status, class: "form-control" %>
-          </div>
+          </div> 
         </div>
         <div class="modal-footer">
           <%= f.submit "登録", class: "btn btn-primary" %>
