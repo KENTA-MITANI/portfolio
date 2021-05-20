@@ -1,0 +1,6 @@
+ja:
+  enums:
+    item:
+      item_status:
+        continue: "学習中"
+        finish: "完了"
